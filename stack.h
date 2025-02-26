@@ -1,4 +1,7 @@
 #pragma once
+#indef __STACK_HPP
+#define __STACK_HPP
+#include "queue.h"
 
 template <class T>
 class Stack {
@@ -9,27 +12,18 @@ private:
 
 public:
 
-	T Stack(int inSize) : size(inSize) {}
+	Stack(int inSize) : size(inSize) { words = new T * [size]; }
 
-	void push(T inVal) {
+	void push(T inVal);
 
-	}
+	T pop();
 
-	T pop() {
+	T top();
 
-	}
+	int length();
 
-	T top() {
-
-	}
-
-	int length() {
-
-	}
-
-	void emptyStack() {
-
-	}
+	void emptyStack();
 
 
 };
+//test
