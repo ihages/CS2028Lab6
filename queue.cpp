@@ -4,7 +4,7 @@
 
 template <class T>
 void Queue<T>::enqueue(T *inVal) {
-    if (!isFull) {
+    if (!(isFull())) {
         words[index] = inVal;
         index++;
     }
@@ -13,13 +13,13 @@ void Queue<T>::enqueue(T *inVal) {
 
 template <class T>
 T Queue<T>::dequeue() {
-    if (!isEmpty) {
+    if (!(isEmpty())) {
         T *retVal = word[0];
         index --;
-        for (int i{}; i < size; i++) {
+        for (int i{}; i < SIZE; i++) {
             words[i] = words[i+1];
         }
-        return retVal;
+        return *retVal;
     }
     throw Undeflow("Queue Underflow", 1);
 }
@@ -36,7 +36,7 @@ bool Queue<T>::isEmpty() {
 
 template <class T>
 bool Queue<T>::isFull() {
-    return index == size;
+    return index == SIZE;
 }
 
 template <class T>
@@ -50,4 +50,5 @@ int Queue<T>::length() {
 }
 
 
-template class Queue<std::string>;
+template class Queue<Stack<char>>;
+

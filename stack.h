@@ -5,17 +5,17 @@
 #include "queue.h"
 #include "Exceptions.h"
 
-template <class T>
+template <typename T>
 class Stack {
 private:
-	T* words[size];
-	int size;
+	int SIZE = 0;
+	T* words[0];
 	int index;
 
 public:
 
-	Stack(int inSize) : size(inSize) { 
-		words = new T * [size]; 
+	Stack(int inSize) : SIZE(inSize) { 
+		words = new T * [SIZE]; 
 	}
 
 	void push(T *inVal);	//Add 

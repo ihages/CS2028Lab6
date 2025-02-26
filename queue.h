@@ -3,16 +3,17 @@
 #define __QUEUE__HPP
 
 #include "Exceptions.h"
+#include "stack.h"
 
 template<class T>
 class Queue {
 private:
-	T words[size];
-    int size;
+    int SIZE = 0;
+	T *words[SIZE];
 	int index = 0;
 public:
-    Queue(int inSize) : size(inSize) { 
-        words = new T *[size]; 
+    Queue(int inSize) : SIZE(inSize) { 
+        words = new T *[SIZE]; 
     }
 
 	void enqueue(T *inVal); //Add item

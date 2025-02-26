@@ -4,9 +4,9 @@
 
 //stacks are words where index1 is the first character in the word
 
-template <class T>
+template <typename T>
 void Stack<T>::push(T *inChar) {
-	if (index < size) {
+	if (index < SIZE) {
 		words[index] = inChar;
 		index++;
 	}
@@ -15,7 +15,7 @@ void Stack<T>::push(T *inChar) {
 	}
 }
 
-template <class T>
+template <typename T>
 T Stack<T>::pop() {
 	if (index > 0) {
 		index--;
@@ -26,17 +26,19 @@ T Stack<T>::pop() {
 	}
 }
 
-template <class T>
+template <typename T>
 T Stack<T>::top(){
-	return words[size-1];
+	return words[SIZE-1];
 }
 
-template <class T>
+template <typename T>
 int Stack<T>::length() {
 	return index;
 }
 
-template <class T>
+template <typename T>
 void Stack<T>::emptyStack() {
 	index = 0;
 }
+
+template class Stack<std::string>;
