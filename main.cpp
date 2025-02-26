@@ -2,6 +2,8 @@
 #include <string>
 #include <iostream>
 #include <sstream>
+#include "stack.h"
+#include "queue.h"
 
 //need a funtion that turns sentence into words and then words into chars
 
@@ -23,6 +25,9 @@ int main() {
 			//add letters to to stack
 			//word[i].<add to stack>
 		}
+
+		//for loop to go through the word STACK and pull out each letter
+		//for loop to pull out words from QUEUE and pull out each word
 	}
 
 
