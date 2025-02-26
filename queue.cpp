@@ -7,9 +7,8 @@ void Queue<T>::enqueue(T *inVal) {
     if (!isFull) {
         words[index] = inVal;
         index++;
-
     }
-    throw Overflow("Queue Overflow", 1)
+    throw Overflow("Queue Overflow", 1);
 }
 
 template <class T>
@@ -22,7 +21,7 @@ T Queue<T>::dequeue() {
         }
         return retVal;
     }
-    throw Undeflow("Queue Underflow", 1)
+    throw Undeflow("Queue Underflow", 1);
 }
 
 template <class T>

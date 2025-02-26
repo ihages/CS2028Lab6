@@ -5,13 +5,13 @@
 //stacks are words where index1 is the first character in the word
 
 template <class T>
-void Stack<T>::push(T inChar) {
-	if (index < SIZE) {
-		word[index] = inChar;
+void Stack<T>::push(T *inChar) {
+	if (index < size) {
+		words[index] = inChar;
 		index++;
 	}
 	else {
-		//exception
+		throw Overflow("Stack Overflow", 0);
 	}
 }
 
@@ -22,18 +22,18 @@ T Stack<T>::pop() {
 		return items[index];
 	}
 	else {
-		//exception
+		throw Underflow("Stack Undeflow", 0);
 	}
 }
 
 template <class T>
 T Stack<T>::top(){
-	return word[SIZE-1];
+	return words[size-1];
 }
 
 template <class T>
 int Stack<T>::length() {
-	return word[SIZE]
+	return index;
 }
 
 template <class T>

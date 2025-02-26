@@ -1,19 +1,24 @@
 #pragma once
 #ifndef __STACK_HPP
 #define __STACK_HPP
+
 #include "queue.h"
+#include "Exceptions.h"
 
 template <class T>
 class Stack {
 private:
-	T* data[size];
+	T* words[size];
+	int size;
 	int index;
 
 public:
 
-	Stack(int inSize) : size(inSize) { words = new T * [size]; }
+	Stack(int inSize) : size(inSize) { 
+		words = new T * [size]; 
+	}
 
-	void push(T inVal);
+	void push(T *inVal);	//Add 
 
 	T pop();
 
@@ -22,8 +27,6 @@ public:
 	int length();
 
 	void emptyStack();
-
-
 };
 //test
 
