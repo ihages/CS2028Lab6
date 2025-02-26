@@ -1,6 +1,6 @@
 #pragma once
 
-template <T>
+template <class T>
 class Stack {
 private:
 	T* data[size];
@@ -9,7 +9,7 @@ private:
 
 public:
 
-	? ? Stack(int inSize) : size(inSize) {}
+	T Stack(int inSize) : size(inSize) {}
 
 	void push(T inVal) {
 
