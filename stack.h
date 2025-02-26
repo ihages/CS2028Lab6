@@ -9,7 +9,7 @@ template <typename T>
 class Stack {
 private:
 	int SIZE = 0;
-	T* words[0];
+	T **words;
 	int index;
 
 public:
@@ -20,9 +20,9 @@ public:
 
 	void push(T *inVal);	//Add 
 
-	T pop();
+	T *pop();
 
-	T top();
+	T *top();
 
 	int length();
 

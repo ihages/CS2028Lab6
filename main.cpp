@@ -49,7 +49,7 @@ int main() {
 	}
 
 	for (int i{}; i < queueSize; i++) {
-		std::cout << wordQueue.dequeue().pop() << std::endl;
+		std::cout << wordQueue.dequeue()->pop() << std::endl;
 	}
 	
 

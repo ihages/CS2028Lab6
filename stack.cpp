@@ -16,10 +16,10 @@ void Stack<T>::push(T *inChar) {
 }
 
 template <typename T>
-T Stack<T>::pop() {
+T *Stack<T>::pop() {
 	if (index > 0) {
 		index--;
-		return items[index];
+		return words[index];
 	}
 	else {
 		throw Underflow("Stack Undeflow", 0);
@@ -27,7 +27,7 @@ T Stack<T>::pop() {
 }
 
 template <typename T>
-T Stack<T>::top(){
+T *Stack<T>::top(){
 	return words[SIZE-1];
 }
 
@@ -42,3 +42,4 @@ void Stack<T>::emptyStack() {
 }
 
 template class Stack<std::string>;
+template class Stack<char>;

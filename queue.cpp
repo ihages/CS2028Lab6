@@ -12,20 +12,20 @@ void Queue<T>::enqueue(T *inVal) {
 }
 
 template <class T>
-T Queue<T>::dequeue() {
+T *Queue<T>::dequeue() {
     if (!(isEmpty())) {
-        T *retVal = word[0];
+        T *retVal = words[0];
         index --;
         for (int i{}; i < SIZE; i++) {
             words[i] = words[i+1];
         }
-        return *retVal;
+        return retVal;
     }
-    throw Undeflow("Queue Underflow", 1);
+    throw Underflow("Queue Underflow", 1);
 }
 
 template <class T>
-T Queue<T>::peek() {
+T *Queue<T>::peek() {
     return words[0];
 }
 
