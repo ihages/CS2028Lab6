@@ -9,6 +9,9 @@
 
 
 int main() {
+	Stack letterStack;
+	Queue wordQueue;
+	
 	std::string inString = "";
 	std::cout << "Input a string" << std::endl;
 	std::getline(std::cin, inString);
