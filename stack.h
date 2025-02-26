@@ -1,5 +1,5 @@
 #pragma once
-#indef __STACK_HPP
+#ifndef __STACK_HPP
 #define __STACK_HPP
 #include "queue.h"
 
@@ -8,7 +8,6 @@ class Stack {
 private:
 	T* data[size];
 	int index;
-
 
 public:
 
@@ -27,3 +26,5 @@ public:
 
 };
 //test
+
+#endif
