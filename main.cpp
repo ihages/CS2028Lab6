@@ -2,6 +2,8 @@
 #include <string>
 #include <iostream>
 #include <sstream>
+#include "stack.h"
+#include "queue.h"
 
 //need a funtion that turns sentence into words and then words into chars
 
