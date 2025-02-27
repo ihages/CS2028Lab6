@@ -5,6 +5,7 @@
 #include "Exceptions.h"
 #include "stack.h"
 
+//Queues are going to be filled with Stacks
 template<class T>
 class Queue {
 private:
@@ -16,13 +17,13 @@ public:
         words = new T *[SIZE]; 
     }
 
-	void enqueue(T *inVal); //Add item
-	T *dequeue();            //Remove item    
-	T *peek();               //Look at top of queue
-	bool isEmpty();         //Check if queue is empty
-	bool isFull();          //Check if queue is full
-	void makeEmpty();       //Empty out the queue
-    int length();           //Show the length of the queue
+	void enqueue(T *inVal);  //Add an item to the Queue
+	T *dequeue();            //Remove an item from the Queue, then returns it    
+	T *peek();               //Look at the top item of the Queue
+	bool isEmpty();          //Check if the Queue is empty
+	bool isFull();           //Check if the Queue is full
+	void makeEmpty();        //Empties out the Queue
+    int length();            //Returns the total amount of items in the Queue
 
 };
 

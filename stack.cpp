@@ -1,9 +1,7 @@
 #include <iostream>
 #include "stack.h"
 
-
-//stacks are words where index1 is the first character in the word
-
+//Add an item to the Stack
 template <typename T>
 void Stack<T>::push(T *inChar) {
 	if (index < SIZE) {
@@ -15,6 +13,7 @@ void Stack<T>::push(T *inChar) {
 	}
 }
 
+//Remove item from the Stack, return item removed from the Stack
 template <typename T>
 T *Stack<T>::pop() {
 	if (index > 0) {
@@ -22,24 +21,28 @@ T *Stack<T>::pop() {
 		return words[index];
 	}
 	else {
-		throw Underflow("Stack Undeflow", 0);
+		throw Underflow("Stack Underflow", 0);
 	}
 }
 
+//Returns the top item in the Stack
 template <typename T>
 T *Stack<T>::top(){
 	return words[SIZE-1];
 }
 
+//Returns the total amount of items in the Stack
 template <typename T>
 int Stack<T>::length() {
 	return index;
 }
 
+//Sets the stack to empty
 template <typename T>
 void Stack<T>::emptyStack() {
 	index = 0;
 }
 
+//Base templates 
 template class Stack<std::string>;
 template class Stack<char>;

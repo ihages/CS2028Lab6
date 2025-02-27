@@ -9,6 +9,9 @@ class Overflow {
 		int errorNum;
 	public:
 		Overflow(std::string inErrMes, int inErrNum) : errorMessage(inErrMes), errorNum(inErrNum) {}
+
+        std::string getErrorMessage(){ return errorMessage; }
+        int getErrorNum(){ return errorNum; }
 };
 
 class Underflow {
@@ -17,6 +20,9 @@ class Underflow {
 		int errorNum;
 	public:
 		Underflow(std::string inErrMes, int inErrNum) : errorMessage(inErrMes), errorNum(inErrNum) {}
+
+        std::string getErrorMessage(){ return errorMessage; }
+        int getErrorNum(){ return errorNum; }
 };
 
 
